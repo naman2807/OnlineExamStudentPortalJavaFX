@@ -1,0 +1,75 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.Controller">
+    <padding>
+        <Insets top="20" left="50"/>
+    </padding>
+
+    <top>
+        <ImageView fitWidth="150" fitHeight="150" BorderPane.alignment="CENTER">
+            <Image url="@GLA_University_logo.png"/>
+        </ImageView>
+    </top>
+
+    <center>
+        <VBox>
+            <HBox spacing="50">
+                <padding>
+                    <Insets top="30"/>
+                </padding>
+                <Label text="Enter Your University Roll Number:">
+                    <font>
+                        <Font name="Times New Roman bold" size="25"/>
+                    </font>
+                </Label>
+                <TextField minWidth="200" fx:id="id" onKeyReleased="#handleKeyPressed"/>
+            </HBox>
+
+            <HBox spacing="50">
+                <padding>
+                    <Insets top="20"/>
+                </padding>
+                <Label text="Enter Your UserName:">
+                    <font>
+                        <Font name="Times New Roman bold" size="25"/>
+                    </font>
+                </Label>
+                <TextField minWidth="200" fx:id="userName" onKeyReleased="#handleKeyPressed"/>
+            </HBox>
+
+            <HBox spacing="50">
+                <padding>
+                    <Insets top="20"/>
+                </padding>
+                <Label text="Enter Your Password:">
+                    <font>
+                        <Font name="Times New Roman bold" size="25"/>
+                    </font>
+                </Label>
+                <PasswordField minWidth="200" fx:id="password" onKeyReleased="#handleKeyPressed"/>
+            </HBox>
+
+            <HBox spacing="20">
+                <padding>
+                    <Insets top="20"/>
+                </padding>
+
+                <Button text="Submit" BorderPane.alignment="BOTTOM_RIGHT" minWidth="20" minHeight="20" alignment="CENTER"
+                        fx:id="submit" style="-fx-font-size: 20; -fx-font-family: 'Times New Roman'"
+                        onAction="#loginToExam">
+                </Button>
+
+                <Button text="Cancel" BorderPane.alignment="BOTTOM_RIGHT" minWidth="20" minHeight="20" alignment="CENTER"
+                        fx:id="cancel" style="-fx-font-size: 20; -fx-font-family: 'Times New Roman'"
+                        onAction="#clearFields">
+                </Button>
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>
